@@ -65,5 +65,7 @@ def test_whole_game(capsys, play):
 def test_game_asks_again_if_wrong_input():
 	cp = subprocess.run([sys.executable,'rps.py'], #sys.executable spousti aktualni jazyk, misto toho by slo 'python'						input='asdf\nrock', #Do rps uzivatel narve bordel (špatnej input), tak se ho to zepta znova a pak da rock , stdout je abzchom si mohli precist vystup
 						encoding = 'utf-8',
-						stdout=subprocess.PIPE)
+						input='adas\nrock',
+						stdout = subprocess.PIPE)
 	assert cp.stdout.count('Rock, paper or scissors?') == 2
+
