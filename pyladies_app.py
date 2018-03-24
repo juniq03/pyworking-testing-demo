@@ -8,7 +8,9 @@ import plotly.graph_objs as go
 
 import os
 
+
 app = dash.Dash()
+#id for heroku
 server=app.server
 server.secret_key = os.environ.get('SECRET_KEY', 'my-secret-key')
 
